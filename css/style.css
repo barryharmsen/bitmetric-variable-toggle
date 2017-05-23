@@ -15,11 +15,13 @@
    height: 30px;
    line-height: 30px;
    font-size: 12px;
-   padding-left: 6px;
+   padding-left: 0px;
+   border-left: 1px solid #ddd;
 }
 
 .qv-object-bitmetric-toggle li:first-child {
    padding-left: 0px;
+   border: 0px;
 }
 
 .qv-object-bitmetric-toggle a {
@@ -29,7 +31,7 @@
     line-height: 30px;
     text-decoration: none;
     color: #595959;
-    border-bottom: 1px solid #ddd;
+
 }
 
 .qv-object-bitmetric-toggle-selected a {
