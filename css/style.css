@@ -16,12 +16,12 @@
    line-height: 30px;
    font-size: 12px;
    padding-left: 0px;
-   border-left: 1px solid #ddd;
+   border-left: 5px solid #ddd;
 }
 
 .qv-object-bitmetric-toggle li:first-child {
    padding-left: 0px;
-   border: 0px; 
+   border: 0px;
 }
 
 .qv-object-bitmetric-toggle a {
