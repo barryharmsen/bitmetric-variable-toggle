@@ -29,13 +29,20 @@ define(["text!./template.ng.html",
                 label: "Variable",
                 type: "string",
                 component: "dropdown",
-                options: [{
-                   value: "vPeriode",
-                   label: "vPeriode"
-                }, {
-                   value: "vIncent",
-                   label: "vIncent"
-                }],
+                options: function() {
+                  var app = qlik.currApp();
+                  var varList = [];
+
+                  return app.getList("VariableList").then(model => {
+                    model.layout.qVariableList.qItems.forEach(function(item){
+                      varList.push({
+                        value: item.qName,
+                        label: item.qName
+                      });
+                    });
+                    return varList;
+                  });
+                },
                 expression: "always",
                 ref: "variableName",
                 defaultValue: "vPeriod"
@@ -133,20 +140,6 @@ define(["text!./template.ng.html",
         $scope.layout.variableValue = $scope.layout.variableToggle[$scope.toggleIndex].value;
         qlik.currApp().variable.setContent($scope.layout.variableName, $scope.layout.variableValue);
       }
-   },
-   paint: function($element, layout) {
-
-      var app = qlik.currApp();
-      app.getList("VariableList", function(reply) {
-         var options = Array();
-      	$.each(reply.qVariableList.qItems, function(key, value) {
-            options.push({
-               value: value.qName,
-               label: value.qName
-            });
-      	});
-         console.log(options);
-      });
-   },
+   }
   }
 });
