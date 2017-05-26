@@ -28,7 +28,6 @@ define(["text!./template.ng.html",
               variableName: {
                 label: "Variable",
                 type: "string",
-                /* dropdown list van variabelen start */
                 component: "dropdown",
                 options: [{
                    value: "vPeriode",
@@ -40,7 +39,6 @@ define(["text!./template.ng.html",
                 expression: "always",
                 ref: "variableName",
                 defaultValue: "vPeriod"
-                /* dropdown list van variabelen einde */
               },
               variableToggle: {
                 type: "array",
@@ -135,6 +133,20 @@ define(["text!./template.ng.html",
         $scope.layout.variableValue = $scope.layout.variableToggle[$scope.toggleIndex].value;
         qlik.currApp().variable.setContent($scope.layout.variableName, $scope.layout.variableValue);
       }
-    }
+   },
+   paint: function($element, layout) {
+
+      var app = qlik.currApp();
+      app.getList("VariableList", function(reply) {
+         var options = Array();
+      	$.each(reply.qVariableList.qItems, function(key, value) {
+            options.push({
+               value: value.qName,
+               label: value.qName
+            });
+      	});
+         console.log(options);
+      });
+   },
   }
 });
