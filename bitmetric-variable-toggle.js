@@ -33,14 +33,14 @@ define(["text!./template.ng.html",
                   var app = qlik.currApp();
                   var varList = [];
 
-                  return app.getList("VariableList").then(model => {
-                    model.layout.qVariableList.qItems.forEach(function(item){
-                      varList.push({
-                        value: item.qName,
-                        label: item.qName
-                      });
-                    });
-                    return varList;
+                  return app.getList("VariableList").then(function(items) {
+                     items.layout.qVariableList.qItems.forEach(function(item) {
+                        varList.push({
+                           value: item.qName,
+                           label: item.qName
+                        });
+                     });
+                     return varList;
                   });
                 },
                 expression: "always",
