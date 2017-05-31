@@ -1,4 +1,4 @@
-define(["text!./bitmetric-variable-toggle.template.ng.html",
+define(["text!./bitmetric-variable-toggle.ng.html",
         "qlik",
         "css!./css/bitmetric-variable-toggle.css"], function(templateHTML, qlik) {
 
@@ -7,7 +7,8 @@ define(["text!./bitmetric-variable-toggle.template.ng.html",
    return {
       initialProperties: {
          variableName: "",
-         variableValue: ""
+         variableValue: "",
+         variableToggle: []
       },
       template: templateHTML,
       definition: {
@@ -76,7 +77,7 @@ define(["text!./bitmetric-variable-toggle.template.ng.html",
          $scope.toggleVar = function($index) {
 
             // Set the value of the variable to the toggled option
-            $scope.toggleIndex = $index;//event.target.attributes["var-index"].value;
+            $scope.toggleIndex = $index; //event.target.attributes["var-index"].value;
             $scope.layout.variableValue = $scope.layout.variableToggle[$scope.toggleIndex].value;
             qlik.currApp().variable.setContent($scope.layout.variableName, $scope.layout.variableValue);
          }
