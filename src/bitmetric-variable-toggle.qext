@@ -2,6 +2,7 @@
   "type" :           "visualization",
   "icon" :           "filterpane",
   "name" :           "Variable toggle",
+  "preview":         "bitmetric-logo.png",
   "description" :    "Toggle the values of a variable",
   "author" :         "Barry Harmsen, Bitmetric B.V.",
   "version" :        "1.0"
