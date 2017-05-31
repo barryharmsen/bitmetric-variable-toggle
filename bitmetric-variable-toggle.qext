@@ -1,8 +1,0 @@
-{
-  "type": "visualization",
-  "icon": "filterpane",
-  "name": "Variable toggle",
-  "description" : "Toggle the values of a variable",
-  "author" : "Barry Harmsen, Bitmetric B.V.",
-  "version" : "1.0"
-}

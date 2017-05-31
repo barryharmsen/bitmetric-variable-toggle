@@ -1,10 +1,8 @@
-define(["text!./template.ng.html",
+define(["text!./bitmetric-variable-toggle.template.ng.html",
         "qlik",
-        "css!./css/style.css"], function(templateHTML, qlik){
+        "css!./css/bitmetric-variable-toggle.css"], function(templateHTML, qlik){
 
   'use strict';
-
-
 
   return {
     initialProperties: {
