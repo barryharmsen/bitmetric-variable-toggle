@@ -1,4 +1,4 @@
-define(["text!./bitmetric-variable-toggle.template.ng.html",
+define(["text!./bitmetric-variable-toggle.ng.html",
         "qlik",
         "./bitmetric-variable-toggle-properties",
         "css!./css/bitmetric-variable-toggle.css"], function(templateHTML, qlik, properties) {
@@ -8,7 +8,8 @@ define(["text!./bitmetric-variable-toggle.template.ng.html",
    return {
       initialProperties: {
          variableName: "",
-         variableValue: ""
+         variableValue: "",
+         variableToggle: []
       },
       template: templateHTML,
       definition: properties,
