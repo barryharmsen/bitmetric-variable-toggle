@@ -37,4 +37,4 @@ This is the result in the non-edit mode of your Qlik Sense application.
 ![](https://github.com/barryharmsen/bitmetric-variable-toggle/raw/master/docs/images/bitmetric-variable-toggle-img-007.png)
 
 ## Example
-You can download the example application ![here](https://github.com/barryharmsen/bitmetric-variable-toggle/blob/master/docs/example/bitmetric-variable-toggle.qvf)
+You can download the example application [here](https://github.com/barryharmsen/bitmetric-variable-toggle/blob/master/docs/example/bitmetric-variable-toggle.qvf) and make sure you click on download.
