@@ -29,8 +29,7 @@ define(["qlik"], function(qlik) {
                       });
                    },
                    expression: "always",
-                   ref: "variableName",
-                   defaultValue: "vPeriod"
+                   ref: "variableName"
                 },
                 variableToggle: {
                    type: "array",
